@@ -32,13 +32,13 @@ class RegisterForm extends Component<IRegisterForm,any> {
                     >{({values, errors, touched, handleChange, handleBlur, handleSubmit}) => (
                             <form onSubmit={handleSubmit} >
                                 <Input name={'email'} type={"email"} placeholder={"E-mail"} onChange={handleChange} onBlur={handleBlur} value={values.email}/>
-                                <p>{errors.email && touched.email && errors.email}</p>
+                                <p style={{color:"#ff0000"}}>{errors.email && touched.email && errors.email}</p>
                                 
                                 <Input name={"password"} type={"password"} placeholder={"Password"} onChange={handleChange} onBlur={handleBlur} value={values.password}/>
-                                <p>{errors.password && touched.password && errors.password}</p>
+                                <p style={{color:"#ff0000"}}>{errors.password && touched.password && errors.password}</p>
                                 
                                 <Input name={"passwordConfirm"} type={"password"} placeholder={"Password confirm"} onChange={handleChange} onBlur={handleBlur} value={values.passwordConfirm}/>
-                                <p>{errors.passwordConfirm && touched.passwordConfirm && errors.passwordConfirm}</p>
+                                <p style={{color:"#ff0000"}}>{errors.passwordConfirm && touched.passwordConfirm && errors.passwordConfirm}</p>
 
                                 {this.props.serverErrors && <p style={{color:"#ff0000"}}>{this.props.serverErrors}</p>}
                                 

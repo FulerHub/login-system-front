@@ -32,9 +32,9 @@ class LoginForm extends Component<ILoginForm,any> {
                         {({values, errors, touched, handleChange, handleBlur, handleSubmit}) => (
                             <form onSubmit={handleSubmit} >
                                 <Input name={'email'} type={"email"} placeholder={"E-mail"} onChange={handleChange} onBlur={handleBlur} value={values.email}/>
-                                <p>{errors.email && touched.email && errors.email}</p>
+                                <p style={{color:"#ff0000"}}>{errors.email && touched.email && errors.email}</p>
                                 <Input name={"password"} type={"password"} placeholder={"Password"} onChange={handleChange} onBlur={handleBlur} value={values.password}/>
-                                <p>{errors.password && touched.password && errors.password}</p>
+                                <p style={{color:"#ff0000"}}>{errors.password && touched.password && errors.password}</p>
 
                                 {this.props.serverErrors && <p style={{color:"#ff0000"}}>{this.props.serverErrors}</p>}
                                 <div className="input-block">

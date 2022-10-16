@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {AuthResponse} from "../helpers/types";
 
-export const API_URL = `http://localhost:7000/api`;
+export const API_URL = `https://api.river-fuler.space/api`;
 
 const instance = axios.create({
     withCredentials: true,

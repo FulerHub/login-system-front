@@ -3,13 +3,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../redux/store";
 import {Button} from "antd";
 import {asyncLogoutAction} from "../redux/slices/userSlice";
-import {Link, Navigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Home:FC = () => {
     const {isAuth, account} = useSelector((state:RootState) => state.user);
     const {isActivated,email} = account;
     const dispatch = useDispatch<AppDispatch>();
-    if(!isAuth) return <Navigate to="/login" />;
     return (
         <div className={'container'}>
             {!isAuth ? <div className={'wrap'}>

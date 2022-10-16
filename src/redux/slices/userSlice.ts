@@ -56,6 +56,7 @@ export const asyncCheckAuthAction = createAsyncThunk(
             localStorage.setItem('token', response.data.accessToken);
             return response.data;
         } catch (e:any) {
+            localStorage.removeItem('token');
             return thunkAPI.rejectWithValue(e.response?.data?.message)
         }
     }
